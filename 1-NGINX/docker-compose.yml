@@ -8,13 +8,13 @@ services:
       - CERTBOT_EMAIL:leopucci@gmail.com
 
     env_file:
-      - C:\nginx-certbot\nginx-certbot.env
+      - .\nginx-certbot.env
     ports:
       - 80:80
       - 443:443
     volumes:
       - nginx_secrets:/etc/letsencrypt
-      - C:\nginx-certbot\user_conf.d:/etc/nginx/user_conf.d
+      - .\user_conf.d\:/etc/nginx/user_conf.d
 
 volumes:
   nginx_secrets:
